@@ -1,10 +1,11 @@
 import { GlobalStyle } from "./styles/Global";
+import { Rotas } from "./routes";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      ola
+      <Rotas />
     </>
   );
 };
