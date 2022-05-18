@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components" 
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -13,6 +13,20 @@ const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
     }
-`
 
-export { GlobalStyle }
+    body::-webkit-scrollbar {
+         width: 12px;              
+    }
+
+    body::-webkit-scrollbar-track {
+        background: orange;      
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: blue;   
+        border-radius: 20px;      
+        border: 3px solid orange; 
+    }
+`;
+
+export { GlobalStyle };

@@ -1,6 +1,13 @@
-import styled from "styled-components";
+import { Container } from "./style";
+import { BsSearch } from "react-icons/bs";
+import { Contract } from "../../components";
+import { useFormContext } from "../../providers/FormProvider";
+import { useState } from "react"
 
 const Contratos = () => {
+  const { contractRegisteredV2, filterContracts } = useFormContext();
+  const [search, setSearch] = useState("")
+
   return (
     <>
       <img
@@ -11,39 +18,27 @@ const Contratos = () => {
         <div className="infos">
           <h1>CONTRATOS</h1>
           <p>VENCIDOS</p>
-          <input placeholder="Digite o nome, numero ou a data do contrato" />
+          <div>
+            <input 
+              placeholder="Digite o numero ou a data do contrato" 
+              onChange={e => {
+                filterContracts(e.target.value)
+                setSearch(e.target.value)
+              }}
+            />
+            <button onClick={() => filterContracts(search)}>
+              <BsSearch />
+            </button>
+          </div>
         </div>
-        <div className="contratos"></div>
+        <div className="contratos">
+          {contractRegisteredV2.map((item, i) => (
+            <Contract key={i} item={item} />
+          ))}
+        </div>
       </Container>
     </>
   );
 };
-
-const Container = styled.div`
-    margin: auto auto;
-    display: flex;
-    flex-direction: column;
-    width: 60vw;
-    padding: 5px;
-    background-color: #61728C;
-
-    .infos {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #55AAE1;
-
-        p {
-            color: white;
-            font-weight: bold;
-        }
-
-        input {
-            border: none;
-            padding: 7px;
-            width: 28%;
-        }
-    }
-`;
 
 export { Contratos };

@@ -14,6 +14,7 @@ const StyledMain = styled.main`
 
     .container {
         display: flex;
+        flex-direction: column;
         align-items: center;
 
       svg {

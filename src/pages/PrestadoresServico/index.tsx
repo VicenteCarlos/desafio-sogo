@@ -1,8 +1,12 @@
 import { StyledMain } from "../PrestadoresServico/style";
-import { AiOutlineUser } from "react-icons/ai";
+import { People } from "../../components";
+import { useFormContext } from "../../providers/FormProvider";
 
+const PrestadoresServico = () => {
+  const { peopleRegistered } = useFormContext();
+  console.log(peopleRegistered);
 
-const PrestadoresServico = () => (
+  return (
     <StyledMain>
       <section className="container-info">
         <img
@@ -10,22 +14,13 @@ const PrestadoresServico = () => (
           alt="logoSogo"
         />
         <div className="container">
-          <AiOutlineUser />
-          <div className="content">
-            <div className="identifier">
-              <hgroup>
-                <h4>Nome: </h4>
-                <h4>CPF: </h4>
-              </hgroup>
-            </div>
-            <div className="endereço">
-              <h4>Endereço: </h4>
-              <h4>Complemento: </h4>
-            </div>
-          </div>
+          {peopleRegistered.map((item, i) => (
+            <People key={i} item={item} />
+          ))}
         </div>
       </section>
     </StyledMain>
-)
+  );
+};
 
-export { PrestadoresServico }
+export { PrestadoresServico };

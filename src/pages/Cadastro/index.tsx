@@ -3,6 +3,7 @@ import { StyledDiv } from "./style"
 import "./styled.css"
 
 const Cadastro = () => {
+
   return (
     <>
       <img
