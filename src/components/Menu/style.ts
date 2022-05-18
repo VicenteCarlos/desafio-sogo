@@ -3,8 +3,8 @@ import styled from "styled-components"
 const StyledSection = styled.section`
     height: 100vh;
     background-color: #1D66DB;
-    padding: 20px;
     color: white;
+    width: 150px;
 
     .info-user {
       display: flex;
@@ -13,13 +13,13 @@ const StyledSection = styled.section`
 
       hgroup{
         h4 {
-          margin: 1rem 0;
+          margin: 1rem 1rem;
         }
       }
 
       svg {
         color: white;
-        font-size: 80px;
+        font-size: 50px;
       }
     }
 
@@ -27,13 +27,15 @@ const StyledSection = styled.section`
       ul {
         li {
           margin: 3.5rem 0;
+          text-align: center;
 
           button {
             background: none;
             border: none;
             color: white;
-            font-size: 17px;
+            font-size: 14px;
             cursor: pointer;
+            text-align: center;
           }
         }
       }

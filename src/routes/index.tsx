@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import {
-  CadastroContratos,
+  Cadastro,
   Contratos,
   ContratosEstatistica,
   PrestadoresServico,
@@ -9,7 +9,7 @@ import {
 const Rotas = () => (
   <Switch>
     <Route exact path="/">
-      <CadastroContratos />
+      <Cadastro />
     </Route>
     <Route path="/contracts">
       <Contratos />
