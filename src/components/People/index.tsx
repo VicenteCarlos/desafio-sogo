@@ -1,7 +1,6 @@
 import { AiOutlineUser } from "react-icons/ai";
 import styled from "styled-components";
 
-
 const People = ({ item }: any) => {
   return (
     <Container>
@@ -24,6 +23,15 @@ const People = ({ item }: any) => {
 
 const Container = styled.div`
   display: flex;
+
+  .content {
+    border: 4px solid transparent;
+    cursor: pointer;
+  }
+
+  .content:hover {
+    border-color: #0D99FF;
+  }
 `
 
 export { People };

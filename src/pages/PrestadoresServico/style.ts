@@ -26,7 +26,7 @@ const StyledMain = styled.main`
         border-radius: 8px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        height: 29vh;
+        height: 29.9vh;
         margin-left: 1.5rem;
       }
 
