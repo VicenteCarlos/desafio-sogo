@@ -1,3 +1,7 @@
-const CadastroContratos = () => <h1>CadastroContratos</h1>
+const CadastroContratos = () => {
+  return (
+    <h1>Cadastrar contratos</h1>
+  );
+};
 
-export { CadastroContratos }
+export { CadastroContratos };

@@ -1,11 +1,16 @@
 import { GlobalStyle } from "./styles/Global";
 import { Rotas } from "./routes";
+import { Menu } from "./components"
+import { StyledDiv } from "./style"
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Rotas />
+      <StyledDiv>
+        <Rotas />
+        <Menu />
+      </StyledDiv>
     </>
   );
 };
