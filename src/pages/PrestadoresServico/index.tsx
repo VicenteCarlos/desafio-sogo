@@ -1,6 +1,7 @@
 import { StyledMain } from "../PrestadoresServico/style";
 import { People } from "../../components";
 import { useFormContext } from "../../providers/FormProvider";
+import { motion } from "framer-motion";
 
 const PrestadoresServico = () => {
   const { peopleRegistered } = useFormContext();
@@ -13,11 +14,16 @@ const PrestadoresServico = () => {
           src="https://cdn.discordapp.com/attachments/971859006173896744/976306416728047646/Screenshot_31.png"
           alt="logoSogo"
         />
-        <div className="container">
+        <motion.div 
+          initial={{x: -1000}}
+          animate={{x: 0}}
+          transition={{type: "tween", duration: 1}}
+          className="container"
+        >
           {peopleRegistered.map((item, i) => (
             <People key={i} item={item} />
           ))}
-        </div>
+        </motion.div>
       </section>
     </StyledMain>
   );

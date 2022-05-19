@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useFormContext } from "../../providers/FormProvider";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const ContratosEstatistica = () => {
   const { contractRegistered } = useFormContext();
@@ -20,21 +21,34 @@ const ContratosEstatistica = () => {
         alt="logoSogo"
       />
       <Container>
-        <section>
+        <motion.section
+          initial={{y: -1000}}
+          animate={{y: 0}}
+          transition={{type: "spring", stiffness: 100, duration: 1.5}}
+        >
           <h2>Numero de contratos cadastrados:</h2>
           <p>{contractRegistered.length}</p>
-        </section>
-        <section>
+        </motion.section>
+        <motion.section
+          initial={{y: -1000}}
+          animate={{y: 0}}
+          transition={{type: "spring", stiffness: 100, duration: 1.5, delay: 1}}
+        >
           <h2>Numero de contratos a vencer:</h2>
           <p>Todos irão vencer</p>
-        </section>
-        <section id="last">
+        </motion.section>
+        <motion.section 
+          id="last"
+          initial={{y: -1000}}
+          animate={{y: 0}}
+          transition={{type: "spring", stiffness: 100, duration: 1.5, delay: 2}}
+        >
           <h2>
             Tempo médio de prestaçao de serviço:{" "}
             {med / contractRegistered.length}
           </h2>
           <p></p>
-        </section>
+        </motion.section>
       </Container>
     </>
   );
