@@ -6,14 +6,6 @@
 Desafio proposto pela SOGO
 </h1>
 
-<p align="center">A little description about your project</p>
-
-<p align="center">
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
-  </a>
-</p>
-
 <hr />
 
 ## Tecnologias utilizadas
@@ -31,4 +23,12 @@ Desafio proposto pela SOGO
 ## Desafio Proposto
 
 Desafio que tem como objetivo solucionar um problema: a falta de gerenciamento de um sistema de cadastro de usuarios e contratos
+
+## Caracteristicas do Sistema
+
+- Cadastro de pessoas
+- Cadastro de contratos
+- Listagem de contratos
+- Listagem dos contratos vencidos
+- Contagem do total de contratos e etc
 
