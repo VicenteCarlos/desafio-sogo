@@ -35,11 +35,8 @@ const FormProvider = ({ children }: IFormContextProps) => {
   const [contractRegistered, setContractRegistered] = useState<
     IContractProps[]
   >([]);
-  const [contractRegisteredV2, setContractRegisteredV2] = useState<
-    IContractProps[]
-  >(contractRegistered);
-
-  console.log(contractRegistered);
+  const [contractRegisteredV2, setContractRegisteredV2] =
+    useState<IContractProps[]>(contractRegistered);
 
   const addPeople = (people: IPeopleProps): void => {
     setPeopleRegistered([...peopleRegistered, people]);
@@ -52,11 +49,10 @@ const FormProvider = ({ children }: IFormContextProps) => {
 
   const filterContracts = (value: string) => {
     const contractFiltered = contractRegistered.filter(
-      (item) =>
-        item.number === value || item.date_validate === value
+      (item) => item.number === value || item.date_validate === value
     );
-    if (value==="") {
-        setContractRegisteredV2(contractRegistered)
+    if (value === "") {
+      setContractRegisteredV2(contractRegistered);
     }
     setContractRegisteredV2(contractFiltered);
   };

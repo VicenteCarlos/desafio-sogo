@@ -55,7 +55,7 @@ const RegisterContractForm = () => {
           label={
             errors.date_validate
               ? errors.date_validate.message
-              : "Data de Validade do Contrato (/*/*/*/ à /*/*/*/)"
+              : "Data de Validade do Contrato (/*/*/*/ - /*/*/*/)"
           }
           variant="filled"
           margin="dense"
